@@ -1,4 +1,4 @@
-cFLAGS="-O2 -pipe -march=native -I/usr/include/glib-2.0"
+cFLAGS="-O2 -pipe -march=native"
 CFLAGS="$CFLAGS $cFLAGS"
 CXXFLAGS="$CXXFLAGS $cFLAGS"
 unset cFLAGS
