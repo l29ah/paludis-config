@@ -1,0 +1,12 @@
+#!/bin/bash
+# OH FUCK
+export I_WANT_GNOME_3_3_X=yes
+
+cd /var/paludis
+
+#export CAVE_RESUME_OPTIONS='--resume-file /var/paludis/resume -C i'
+export CAVE_UNINSTALL_OPTIONS="$CAVE_RESUME_OPTIONS"' -R w --recommendations display -J 5 --purge */* -C i -U */*'
+export CAVE_RESOLVE_OPTIONS="$CAVE_UNINSTALL_OPTIONS"
+export CAVE_FIX_LINKAGE_OPTIONS="-- $CAVE_RESOLVE_OPTIONS"
+
+ionice -c 3 nice -n 15 /usr/bin/cave "$@"

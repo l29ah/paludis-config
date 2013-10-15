@@ -1,0 +1,3 @@
+#!/bin/bash
+cave sync #--sequential	# avoid borking crappy wifi
+cave resolve -xc world
